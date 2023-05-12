@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block vars
+	- title = 'Имплантация зубов в Новосибирске | Доступная стоматология'
+	- pageClass = '_page'
+
+block head
+	include ../static/head/head
+
+block header
+	include ../static/header/header
+
+block main
+	include ../components/intro/intro
+	include ../components/second/second
+	include ../components/return/return
+	include ../components/implants/implants
+	include ../components/stages/stages
+	include ../components/doctors/doctors
+	include ../components/request/request
+
+block footer
+	include ../static/footer/footer
+
+block popup
+	include ../includes/popup/popup
+	include ../components/modal/modal
+
+block script
+	script(src='js/libs/libs.min.js')

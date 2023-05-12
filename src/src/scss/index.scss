@@ -1,0 +1,53 @@
+@use 'sass:math';
+@import 'reset';
+@import 'utils';
+@import 'mixins';
+@import 'fonts';
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding: var(--scroll-padding, 201px);
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+._page {
+	flex: 1 1 auto;
+}
+
+[class*='__container'] {
+	--max-width: 1345px;
+	--padding: 20px;
+	width: min(100% - var(--padding), var(--max-width));
+	margin-inline: auto;
+}
+[class*='__container'][data-type='doctors'] {
+	--max-width: 1525px;
+}
+
+
+@import '../pug/static/header/header';
+@import '../pug/static/footer/footer';
+@import '../pug/static/header/burger/burger';
+@import '../pug/components/intro/intro';
+@import '../pug/components/request/request';
+@import '../pug/components/doctors/doctors';
+@import '../pug/components/stages/stages';
+@import '../pug/components/implants/implants';
+@import '../pug/components/return/return';
+@import '../pug/components/second/second';
+@import '../pug/components/policy/policy';
+@import '../pug/includes/popup/popup';
+@import '../pug/components/modal/modal';

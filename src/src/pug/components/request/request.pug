@@ -1,0 +1,13 @@
+section.request#request
+	.request__container
+		.request__content
+			.request__header
+				h2.request__title Оставьте заявку или позвоните:
+				a.request__tel(href='tel:83833902525') 8 (383) 390-25-25
+			.request__body
+				form.form#signup(action='#', method='POST')
+					.form__item
+						label.form__label(for='phone')
+						input.form__input._req#phone(type='tel', name='phone', placeholder='Ваш телефон', autocomplete='off')
+					button.form__btn(type='submit', name='submit') Записаться на приём
+				p.request__agreement Нажимая на кнопку, Вы соглашаетесь на <a href='policy.html'>обработку персональных данных</a>

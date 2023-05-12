@@ -1,0 +1,114 @@
+
+.second {
+	position: relative;
+	background: url(../images/bg4.png) no-repeat center/cover;
+	@media (max-width: 420px) {
+		background: none !important;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		bottom: -12px;
+		width: 794px;
+		height: 813px;
+		background: url(../images/second/img.png) no-repeat center/cover;
+		z-index: 1;
+		@media (max-width: 1920px) {
+			@include adaptive(width, 1366px, 1920px, 510px, 794px);
+			@include adaptive(height, 1366px, 1920px, 522px, 813px);
+			@include adaptive(height, 1366px, 1920px, 522px, 813px);
+		}
+		@media (max-width: 1366px) {
+			width: 510px;
+			height: 522px;
+		}
+		@media (max-width: 1024px) {
+			width: 455px;
+			height: 466px;
+		}
+		@media (max-width: 992px) {
+			display: none;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 57px 0 37px;
+
+		p {
+			font-weight: 500;
+			@include aFont(35, 16, 1);
+			line-height: 36px;
+			text-align: right;
+			color: rgba(0, 0, 0, 0.75);
+
+			span {
+				font-weight: 700;
+			}
+
+			@media (max-width: 420px) {
+				line-height: 20px;
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 31px;
+		text-align: right;
+		margin: 0 0 18px;
+
+		&:before {
+			position: absolute;
+			content: '';
+			inset: 0 -505% 0 auto;
+			width: 500%;
+			height: 2px;
+			background: linear-gradient(180deg, #0088C7 0%, #002EA6 100%);
+			margin-block: auto;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 25px;
+		margin: 0 0 60px;
+	}
+
+	&__item {
+		text-align: right;
+	}
+
+	&__text {
+		font-weight: 500;
+		//font-size: 35px;
+		@include aFont(35, 16, 1);
+		line-height: 36px;
+		color: rgba(0, 0, 0, 0.6);
+
+		span {
+			font-weight: 700;
+			@include aFont(35, 18, 1);
+			line-height: 36px;
+			background: linear-gradient(76.62deg, #1C4E95 2.22%, #00A0E3 99.82%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			@media (max-width: 420px) {
+				line-height: 20px;
+			}
+		}
+
+		@media (max-width: 420px) {
+			line-height: 20px;
+		}
+	}
+}

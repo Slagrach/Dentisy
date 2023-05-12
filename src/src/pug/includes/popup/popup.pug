@@ -1,0 +1,69 @@
+.popup.popup_popup
+	.popup__content
+		.popup__body
+			.popup__close
+			form.popup__tabs#tabs
+				input(type='hidden' name='project_name' value='Заявка на приём')
+				input(type='hidden' name='admin_email' value='slagrach@gmail.com')
+				input(type='hidden' name='form_subject' value='Заявка')
+				.popup__tabs-body
+					.popup__tab._active
+						h2.popup__title Какая у Вас ситуация?
+						ul.popup__inner._inner-one
+							li.popup__item.popup__item_one
+								input.input#r1(type='radio' name='teeth' value='1')
+								label(for='r1')
+									span Нет одного или нескольких зубов
+							li.popup__item.popup__item_two
+								input.input#r2(type='radio' name='teeth' value='2')
+								label(for='r2')
+									span Нет почти всех зубов
+							li.popup__item.popup__item_three
+								input.input#r3(type='radio' name='teeth' value='3')
+								label(for='r3')
+									span Нет всех зубов
+					.popup__tab
+						h2.popup__title На какой челюсти нужно восстановить зубы?
+						ul.popup__inner._inner-two
+							li.popup__item
+								input#r4(type='radio' name='jaws')
+								label(for='r4') На верхней
+							li.popup__item
+								input#r5(type='radio' name='jaws')
+								label(for='r5') На нижней
+							li.popup__item
+								input#r6(type='radio' name='jaws')
+								label(for='r6') На обеих
+					.popup__tab
+						h2.popup__title Как давно отсутствуют зубы?
+						ul.popup__inner._inner-three
+							li.popup__item
+								input#r7(type='radio' name='how long')
+								label(for='r7') Менее 6 месяцев
+							li.popup__item
+								input#r8(type='radio' name='how long')
+								label(for='r8') Полгода и более
+							li.popup__item
+								input#r9(type='radio' name='how long')
+								label(for='r9') Сложно сказать
+					.popup__tab
+						h2.popup__title Когда планируете начать лечение?
+						ul.popup__inner._inner-four
+							li.popup__item
+								input#r10(type='radio' name='planning')
+								label(for='r10') Как можно скорее
+							li.popup__item
+								input#r11(type='radio' name='planning')
+								label(for='r11') В течении месяца
+							li.popup__item
+								input#r12(type='radio' name='planning')
+								label(for='r12') Сложно сказать
+				.popup__buttons#buttons
+					button.popup__btn.btn.popup__btn_prev#prev(type='button') Назад
+					button.popup__btn.btn.popup__btn_next#next(type='button') Далее
+					button.submit-btn.btn(type='submit' disabled) Отправить
+				ul.popup__progress#progress
+					li.popup__slot._active
+					li.popup__slot
+					li.popup__slot
+					li.popup__slot

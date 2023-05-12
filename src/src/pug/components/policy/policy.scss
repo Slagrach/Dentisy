@@ -1,0 +1,43 @@
+.policy {
+
+	&__content {
+		padding: 228px 0 125px;
+		@media (max-width: 768px) {
+			padding: 96px 0 125px;
+		}
+		@media (max-width: 420px) {
+			padding: 96px 0 50px;
+		}
+	}
+
+	&__header {
+		margin: 0 0 40px;
+	}
+
+	&__title {
+		@include aFont(26, 20, 1);
+
+	}
+
+	&__body {
+		p {
+			@include aFont(17, 15, 1);
+			line-height: 30px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 10px 0 10px 20px;
+	}
+
+	&__item {
+	}
+
+	&__text {
+		@include aFont(15, 13, 1);
+		font-weight: 500;
+	}
+}
